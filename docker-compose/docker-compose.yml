@@ -12,7 +12,7 @@ services:
     volumes:
     - ./config:/config
 
-  storage-0:
+  storage-0a:
     image: buildbarn/bb-storage:20201219T141331Z-3d6325d
     command:
     - /config/storage.jsonnet
@@ -23,10 +23,24 @@ services:
     - 7981:7981
     volumes:
     - ./config:/config
-    - ./storage-ac-0:/storage-ac
-    - ./storage-cas-0:/storage-cas
+    - ./storage-ac-0a:/storage-ac
+    - ./storage-cas-0a:/storage-cas
 
-  storage-1:
+  storage-0b:
+    image: buildbarn/bb-storage:20201219T141331Z-3d6325d
+    command:
+    - /config/storage.jsonnet
+    expose:
+    - 8981
+    - 9980
+    ports:
+    - 7981:7981
+    volumes:
+    - ./config:/config
+    - ./storage-ac-0b:/storage-ac
+    - ./storage-cas-0b:/storage-cas
+
+  storage-1a:
     image: buildbarn/bb-storage:20201219T141331Z-3d6325d
     command:
     - /config/storage.jsonnet
@@ -37,8 +51,23 @@ services:
     - 17981:7981
     volumes:
     - ./config:/config
-    - ./storage-ac-1:/storage-ac
-    - ./storage-cas-1:/storage-cas
+    - ./storage-ac-1a:/storage-ac
+    - ./storage-cas-1a:/storage-cas
+
+  storage-1b:
+    image: buildbarn/bb-storage:20201219T141331Z-3d6325d
+    command:
+    - /config/storage.jsonnet
+    expose:
+    - 8981
+    - 9980
+    ports:
+    - 17981:7981
+    volumes:
+    - ./config:/config
+    - ./storage-ac-1b:/storage-ac
+    - ./storage-cas-1b:/storage-cas
+
 
   scheduler:
     image: buildbarn/bb-scheduler:20201218T103144Z-6f7de1f
