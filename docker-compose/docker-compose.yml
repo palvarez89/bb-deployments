@@ -19,8 +19,6 @@ services:
     expose:
     - 8981
     - 9980
-    ports:
-    - 7981:7981
     volumes:
     - ./config:/config
     - ./storage-ac-0a:/storage-ac
@@ -33,8 +31,6 @@ services:
     expose:
     - 8981
     - 9980
-    ports:
-    - 7981:7981
     volumes:
     - ./config:/config
     - ./storage-ac-0b:/storage-ac
@@ -47,8 +43,6 @@ services:
     expose:
     - 8981
     - 9980
-    ports:
-    - 17981:7981
     volumes:
     - ./config:/config
     - ./storage-ac-1a:/storage-ac
@@ -61,8 +55,6 @@ services:
     expose:
     - 8981
     - 9980
-    ports:
-    - 17981:7981
     volumes:
     - ./config:/config
     - ./storage-ac-1b:/storage-ac

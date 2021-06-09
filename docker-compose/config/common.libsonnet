@@ -64,8 +64,8 @@ local ac_shard_config = shard_config(
                 mirrored: {
                   backend_a: { grpc: { address: 'storage-0:8981' } },
                   backend_b: { grpc: { address: 'storage-1:8981' } },
-                  replicator_a_to_b: { 'local': {} },,
-                  replicator_b_to_a: { 'local': {} },,
+                  replicator_a_to_b: { 'local': {} },
+                  replicator_b_to_a: { 'local': {} },
                 },
               },
               weight: 1,
@@ -75,8 +75,8 @@ local ac_shard_config = shard_config(
                 mirrored: {
                   backend_a: { grpc: { address: 'storage-2:8981' } },
                   backend_b: { grpc: { address: 'storage-3:8981' } },
-                  replicator_a_to_b: { 'local': {} },,
-                  replicator_b_to_a: { 'local': {} },,
+                  replicator_a_to_b: { 'local': {} },
+                  replicator_b_to_a: { 'local': {} },
                 },
               },
               weight: 1,
